@@ -1,0 +1,42 @@
+ there are 3 directories
+ - working directory
+ - tracking or staging directory
+ - Commit directory
+
+ working directory:
+ This will show the working files, which are work in progress
+
+ Staging directory:
+ once the file is ready to commit, file should be sent to the staging directory.
+ staging directory will index the file to ensure file has a unique reference.
+
+ Command: git add 
+ 
+ How to unstage the file in staging directory?
+ we can use git rm --cached <file> to remove the file from staging area.
+
+ to stage multiple files we use git add .
+
+ file -- > Indexing(Commit ID) --> Storage location(local)
+ once file is in storage location then for the backup and collaboration we can move the file to central location
+ Storage location (local repository) --> remote repository
+
+ Commit directory:
+ This is the local storage repository.
+ It creates the base 
+ git commit -m(message) "added first commit"
+
+ For the first commit, git should understand who the user is.
+ git config --global user.email "<rajeshparimi@gmail.com>"
+ git config --global user.name "rajeshparimi"
+
+ This helps to commit a file in working area which is indexed at staging area into the local repository.
+
+ git show - will show th commits with commit ID, Author, email.
+ git ls-files - lists the files available in staging area.
+ git status - will show the untracked files
+ git log - will display all the commits in the commit area
+
+ git log --oneline
+ 
+
